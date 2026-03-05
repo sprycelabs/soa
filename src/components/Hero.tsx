@@ -1,21 +1,36 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import heroImg from "@/assets/hero.jpg";
 
 const Hero = () => {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.05, 1.2]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.3, 0.7]);
+  const textY = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      <div className="absolute inset-0">
+    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden">
+      <motion.div className="absolute inset-0" style={{ y: imageY, scale: imageScale }}>
         <img
           src={heroImg}
           alt="Moderní architektura"
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
-      </div>
+      </motion.div>
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
+      <motion.div className="absolute inset-0 bg-foreground" style={{ opacity: overlayOpacity }} />
 
-      <div className="relative h-full grid grid-cols-12 gap-4 section-padding items-end pb-16 md:pb-24">
+      <motion.div
+        style={{ y: textY }}
+        className="relative h-full grid grid-cols-12 gap-4 section-padding items-end pb-16 md:pb-24"
+      >
         <div className="col-span-12 md:col-span-9">
-          {/* Gold divider line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -71,7 +86,7 @@ const Hero = () => {
             Architektura · Interiéry · Veřejný prostor
           </p>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
