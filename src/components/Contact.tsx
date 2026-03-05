@@ -31,7 +31,7 @@ const Contact = () => {
             <br />
             <span className="italic">nás</span>
           </h2>
-          <p className="font-body text-sm md:text-base leading-[1.9] text-muted-foreground font-extralight max-w-md mb-16">
+          <p className="font-body text-sm md:text-base leading-[1.9] text-foreground/70 font-light max-w-md mb-16">
             Máte projekt nebo nápad, který byste chtěli realizovat? Rádi si s vámi domluvíme nezávaznou konzultaci.
           </p>
 
@@ -72,52 +72,52 @@ const Contact = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>
-              <label className="luxury-label block mb-3">Jméno</label>
+              <label className="font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 block mb-3">Jméno</label>
               <input
                 type="text"
                 required
                 maxLength={100}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-extralight focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-muted-foreground/30"
+                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
                 placeholder="Vaše jméno"
               />
             </div>
 
             <div>
-              <label className="luxury-label block mb-3">Email</label>
+              <label className="font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 block mb-3">Email</label>
               <input
                 type="email"
                 required
                 maxLength={255}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-extralight focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-muted-foreground/30"
+                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
                 placeholder="vas@email.cz"
               />
             </div>
 
             <div>
-              <label className="luxury-label block mb-3">Telefon</label>
+              <label className="font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 block mb-3">Telefon</label>
               <input
                 type="tel"
                 maxLength={20}
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-extralight focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-muted-foreground/30"
+                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
                 placeholder="+420 ..."
               />
             </div>
 
             <div>
-              <label className="luxury-label block mb-3">Zpráva</label>
+              <label className="font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 block mb-3">Zpráva</label>
               <textarea
                 required
                 maxLength={1000}
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-extralight focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-muted-foreground/30 resize-none"
+                className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35 resize-none"
                 placeholder="Popište váš projekt nebo nápad..."
               />
             </div>
