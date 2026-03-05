@@ -40,19 +40,19 @@ const Philosophy = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="col-span-12 md:col-span-4 md:col-start-5"
+          className="col-span-12 md:col-span-4 md:col-start-1 mt-4 md:mt-6"
         >
           <p className="font-body text-sm md:text-base leading-relaxed text-muted-foreground font-light">
             Naše práce stojí na dialogu – mezi prostorem a člověkem, mezi tradicí a inovací, mezi formou a funkcí. Usilujeme o architekturu, která je nadčasová a zároveň citlivá ke svému okolí.
           </p>
         </motion.div>
 
-        {/* Image offset – spanning right columns, overlapping vertically */}
+        {/* Image on the right, no overlap with text */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="col-span-12 md:col-span-5 md:col-start-8 md:-mt-48 mt-8 relative z-10"
+          className="col-span-12 md:col-span-5 md:col-start-8 md:row-start-2 md:row-span-2 mt-8 md:mt-0"
         >
           <img
             src={philosophyImg}
