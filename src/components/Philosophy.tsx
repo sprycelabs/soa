@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import philosophyImg from "@/assets/philosophy.jpg";
 
@@ -6,10 +6,19 @@ const Philosophy = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+  const goldLineY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
   return (
-    <section className="bg-secondary relative overflow-hidden">
+    <section ref={sectionRef} className="bg-secondary relative overflow-hidden">
       <div ref={ref} className="relative">
         {/* Title spanning full width with offset */}
         <div className="section-padding pt-32 md:pt-48 pb-16 md:pb-24">
@@ -61,22 +70,25 @@ const Philosophy = () => {
               </p>
             </motion.div>
 
-            {/* Image – offset, overlapping grid edge */}
+            {/* Image – parallax offset */}
             <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.97 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 1, delay: 0.25, ease }}
+              style={{ y: imageY }}
               className="col-span-12 md:col-span-4 md:col-start-9 mt-12 md:-mt-32 relative z-10"
             >
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img
                   src={philosophyImg}
                   alt="Architektonický detail"
-                  className="w-full aspect-[3/4] object-cover"
+                  className="w-full aspect-[3/4] object-cover scale-110"
                 />
-                {/* Decorative gold line */}
-                <div className="absolute -bottom-4 -left-4 w-16 h-px bg-gold hidden md:block" />
-                <div className="absolute -bottom-4 -left-4 w-px h-16 bg-gold hidden md:block" />
+                {/* Decorative gold line with parallax */}
+                <motion.div style={{ y: goldLineY }} className="absolute -bottom-4 -left-4 hidden md:block">
+                  <div className="w-16 h-px bg-gold" />
+                  <div className="w-px h-16 bg-gold" />
+                </motion.div>
               </div>
             </motion.div>
           </div>
