@@ -18,7 +18,7 @@ const Philosophy = () => {
   const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
   return (
-    <section className="bg-secondary relative overflow-hidden">
+    <section ref={sectionRef} className="bg-secondary relative overflow-hidden">
       <div ref={ref} className="relative">
         {/* Title spanning full width with offset */}
         <div className="section-padding pt-32 md:pt-48 pb-16 md:pb-24">
