@@ -13,29 +13,53 @@ const Hero = () => {
         <div className="absolute inset-0 bg-foreground/30" />
       </div>
 
-      <div className="relative h-full grid grid-cols-12 gap-4 section-padding items-end pb-20 md:pb-28">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="col-span-12 md:col-span-8"
-        >
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[6.5rem] font-light text-primary-foreground tracking-tight leading-[0.9]">
-            SOA –
-            <br />
-            Sons of
-            <br />
-            Architecture
+      <div className="relative h-full grid grid-cols-12 gap-4 section-padding items-end pb-16 md:pb-24">
+        <div className="col-span-12 md:col-span-9">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-body text-xs tracking-[0.3em] uppercase text-primary-foreground/60 block mb-6"
+          >
+            Architektonické studio
+          </motion.span>
+
+          <h1 className="font-display font-light text-primary-foreground leading-[0.85] tracking-tight">
+            <motion.span
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="block text-[4rem] md:text-[8rem] lg:text-[12rem]"
+            >
+              SOA
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="block text-[2.5rem] md:text-[5rem] lg:text-[7rem] text-primary-foreground/70"
+            >
+              Sons of
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="block text-[2.5rem] md:text-[5rem] lg:text-[7rem] italic"
+            >
+              Architecture
+            </motion.span>
           </h1>
-        </motion.div>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="col-span-12 md:col-span-4 md:col-start-9"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="col-span-12 md:col-span-3 md:col-start-10 md:self-end"
         >
-          <p className="font-body text-sm md:text-base text-primary-foreground/80 font-light tracking-wide leading-relaxed">
-            „Architektonické studio zaměřené na moderní architekturu, interiéry a veřejný prostor."
+          <p className="font-body text-sm text-primary-foreground/60 font-light leading-relaxed">
+            Architektura · Interiéry · Veřejný prostor
           </p>
         </motion.div>
       </div>
