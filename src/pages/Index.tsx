@@ -1,7 +1,13 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import Philosophy from "@/components/Philosophy";
+import Services from "@/components/Services";
 import Projects from "@/components/Projects";
+import Process from "@/components/Process";
 import About from "@/components/About";
+import Awards from "@/components/Awards";
+import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -10,8 +16,14 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <FeaturedProjects />
+      <Philosophy />
+      <Services />
       <Projects />
+      <Process />
       <About />
+      <Awards />
+      <Team />
       <Contact />
       <Footer />
     </div>
