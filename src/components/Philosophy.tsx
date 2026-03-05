@@ -7,34 +7,57 @@ const Philosophy = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding py-24 md:py-40 bg-secondary">
-      <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section className="section-padding py-24 md:py-40 bg-secondary relative overflow-hidden">
+      <div ref={ref} className="grid grid-cols-12 gap-4 md:gap-6">
+        {/* Large editorial title spanning full width */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
+          className="col-span-12 mb-8 md:mb-16"
         >
-          <span className="font-body text-xs tracking-widest uppercase text-muted-foreground">Přístup</span>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mt-2 mb-8">
-            Naše filozofie
+          <span className="font-body text-xs tracking-widest uppercase text-muted-foreground block mb-4">Přístup</span>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-light text-foreground leading-[0.85] tracking-tight">
+            Naše
+            <br />
+            filozofie
           </h2>
-          <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground font-light mb-6">
+        </motion.div>
+
+        {/* Two-column editorial text */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="col-span-12 md:col-span-4 md:col-start-1"
+        >
+          <p className="font-body text-sm md:text-base leading-relaxed text-muted-foreground font-light">
             Věříme, že kvalitní architektura vzniká z hlubokého porozumění místu, kontextu a potřebám klienta. Každý projekt vnímáme jako jedinečný proces hledání nejlepšího řešení.
-          </p>
-          <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground font-light">
-            Naše práce stojí na dialogu – mezi prostorem a člověkem, mezi tradicí a inovací, mezi formou a funkcí. Usilujeme o architekturu, která je nadčasová a zároveň citlivá ke svému okolí.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="col-span-12 md:col-span-4 md:col-start-5"
+        >
+          <p className="font-body text-sm md:text-base leading-relaxed text-muted-foreground font-light">
+            Naše práce stojí na dialogu – mezi prostorem a člověkem, mezi tradicí a inovací, mezi formou a funkcí. Usilujeme o architekturu, která je nadčasová a zároveň citlivá ke svému okolí.
+          </p>
+        </motion.div>
+
+        {/* Image offset – spanning right columns, overlapping vertically */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="col-span-12 md:col-span-5 md:col-start-8 md:-mt-48 mt-8 relative z-10"
         >
           <img
             src={philosophyImg}
             alt="Architektonický detail"
-            className="w-full aspect-square object-cover"
+            className="w-full aspect-[3/4] object-cover"
           />
         </motion.div>
       </div>
