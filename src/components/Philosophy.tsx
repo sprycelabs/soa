@@ -6,6 +6,15 @@ const Philosophy = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+  const goldLineY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
   return (
