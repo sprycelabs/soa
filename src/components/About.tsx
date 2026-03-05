@@ -8,12 +8,11 @@ const About = () => {
 
   return (
     <section id="o-nas" className="relative overflow-hidden">
-      {/* Full-width image */}
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.2 }}
         className="w-full"
       >
         <img
@@ -23,24 +22,24 @@ const About = () => {
         />
       </motion.div>
 
-      {/* Overlapping text block */}
-      <div className="section-padding -mt-20 md:-mt-32 relative z-10">
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
+      <div className="section-padding -mt-24 md:-mt-40 relative z-10">
+        <div className="grid grid-cols-12 gap-4 md:gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="col-span-12 md:col-span-7 bg-background p-8 md:p-16"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="col-span-12 md:col-span-7 bg-background p-10 md:p-20"
           >
-            <span className="font-body text-xs tracking-widest uppercase text-muted-foreground">O nás</span>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mt-2 mb-8 leading-[0.9]">
-              O studiu SOA
+            <div className="luxury-divider mb-6" />
+            <span className="luxury-label block mb-4">O nás</span>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-10 leading-[0.85]">
+              O studiu <span className="italic">SOA</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <p className="font-body text-sm md:text-base leading-relaxed text-muted-foreground font-light">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
                 SOA – Sons of Architecture je architektonické studio zaměřené na současnou architekturu, interiéry a veřejný prostor.
               </p>
-              <p className="font-body text-sm md:text-base leading-relaxed text-muted-foreground font-light">
+              <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
                 Každý projekt vnímáme jako jedinečnou příležitost vytvořit prostor, který má charakter, kvalitu a dlouhodobou hodnotu.
               </p>
             </div>

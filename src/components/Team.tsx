@@ -15,22 +15,22 @@ const Team = () => {
   const titleInView = useInView(titleRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="tym" className="section-padding py-24 md:py-40 bg-secondary">
-      <div className="grid grid-cols-12 gap-4 md:gap-6">
+    <section id="tym" className="section-padding py-32 md:py-48 bg-secondary">
+      <div className="grid grid-cols-12 gap-4 md:gap-8">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 30 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="col-span-12 mb-16 md:mb-24"
+          transition={{ duration: 0.8 }}
+          className="col-span-12 mb-20 md:mb-28"
         >
-          <span className="font-body text-xs tracking-widest uppercase text-muted-foreground">Lidé</span>
-          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground mt-2 leading-[0.9]">
-            Náš tým
+          <div className="luxury-divider mb-6" />
+          <span className="luxury-label block mb-4">Lidé</span>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[0.85]">
+            Náš <span className="italic">tým</span>
           </h2>
         </motion.div>
 
-        {/* Asymmetric team cards with vertical offsets */}
         {members.map((member, i) => (
           <MemberCard key={member.name} member={member} index={i} />
         ))}
@@ -45,30 +45,28 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
 
   const colClasses = [
     "col-span-12 md:col-span-4 md:col-start-1",
-    "col-span-12 md:col-span-3 md:col-start-6 md:mt-20",
+    "col-span-12 md:col-span-3 md:col-start-6 md:mt-24",
     "col-span-12 md:col-span-4 md:col-start-9 md:-mt-8",
   ];
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: index * 0.15 }}
+      transition={{ duration: 0.9, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={colClasses[index]}
     >
       <div className="overflow-hidden">
         <img
           src={member.img}
           alt={member.name}
-          className="w-full aspect-[3/4] object-cover transition-transform duration-[1.2s] ease-out hover:scale-105"
+          className="w-full aspect-[3/4] object-cover transition-transform duration-[1.5s] ease-out hover:scale-[1.03] grayscale hover:grayscale-0"
         />
       </div>
-      <div className="mt-5">
+      <div className="mt-6">
         <h3 className="font-display text-xl md:text-2xl font-light text-foreground">{member.name}</h3>
-        <span className="font-body text-xs tracking-widest uppercase text-muted-foreground mt-1 block">
-          {member.position}
-        </span>
+        <span className="luxury-label text-muted-foreground mt-2 block">{member.position}</span>
       </div>
     </motion.div>
   );
