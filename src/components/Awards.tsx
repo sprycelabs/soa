@@ -14,20 +14,21 @@ const Awards = () => {
   const titleInView = useInView(titleRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding py-24 md:py-40">
-      <div className="grid grid-cols-12 gap-4 md:gap-6">
+    <section className="section-padding py-32 md:py-48">
+      <div className="grid grid-cols-12 gap-4 md:gap-8">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 30 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="col-span-12 md:col-span-4 mb-12 md:mb-0"
+          transition={{ duration: 0.8 }}
+          className="col-span-12 md:col-span-4 mb-16 md:mb-0"
         >
-          <span className="font-body text-xs tracking-widest uppercase text-muted-foreground">Uznání</span>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground mt-2 leading-[0.9]">
+          <div className="luxury-divider mb-6" />
+          <span className="luxury-label block mb-4">Uznání</span>
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[0.85]">
             Ocenění
             <br />
-            <span className="text-muted-foreground">&</span> publikace
+            <span className="italic text-muted-foreground">&amp; publikace</span>
           </h2>
         </motion.div>
 
@@ -51,11 +52,11 @@ const AwardRow = ({ award, index }: { award: typeof awards[0]; index: number }) 
       initial={{ opacity: 0, x: -20 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="grid grid-cols-12 gap-4 py-5 border-b border-border items-baseline"
+      className="grid grid-cols-12 gap-4 py-6 border-b border-border items-baseline group hover:bg-accent/30 transition-colors duration-500 -mx-4 px-4"
     >
-      <span className="col-span-1 font-body text-xs text-muted-foreground">{award.year}</span>
+      <span className="col-span-2 md:col-span-1 font-body text-[10px] tracking-widest text-[hsl(var(--gold))]">{award.year}</span>
       <span className="col-span-5 font-display text-xl md:text-2xl font-light text-foreground">{award.name}</span>
-      <span className="col-span-6 font-body text-sm text-muted-foreground font-light text-right">{award.detail}</span>
+      <span className="col-span-5 md:col-span-6 font-body text-xs text-muted-foreground font-extralight text-right tracking-wider">{award.detail}</span>
     </motion.div>
   );
 };
