@@ -33,7 +33,7 @@ const Philosophy = () => {
               <span className="luxury-label block mb-6">Přístup</span>
             </div>
             <div className="col-span-12">
-              <h2 className="font-display text-5xl md:text-7xl lg:text-[9rem] xl:text-[11rem] font-light text-foreground leading-[0.82] tracking-tight">
+              <h2 className="font-display text-4xl md:text-7xl lg:text-[9rem] xl:text-[11rem] font-light text-foreground leading-[0.82] tracking-tight">
                 Naše
                 <span className="italic ml-4 md:ml-8">filozofie</span>
               </h2>

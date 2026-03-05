@@ -26,7 +26,7 @@ const Contact = () => {
         >
           <div className="luxury-divider mb-6" />
           <span className="luxury-label block mb-6">Kontakt</span>
-          <h2 className="font-display text-5xl md:text-7xl lg:text-[7rem] font-light text-foreground leading-[0.82] mb-10">
+          <h2 className="font-display text-4xl md:text-7xl lg:text-[7rem] font-light text-foreground leading-[0.82] mb-10">
             Kontaktujte
             <br />
             <span className="italic">nás</span>
