@@ -65,7 +65,7 @@ const ProjectRow = ({ project, index, className = "", aspect }: { project: typeo
     target: cardRef,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const imgY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
     <motion.div
@@ -80,7 +80,7 @@ const ProjectRow = ({ project, index, className = "", aspect }: { project: typeo
           style={{ y: imgY }}
           src={project.img}
           alt={project.title}
-          className={`w-full ${aspect} object-cover scale-[1.15] transition-transform duration-[1.2s] ease-out group-hover:scale-[1.2]`}
+          className={`w-full ${aspect} object-cover scale-[1.35] transition-transform duration-[1.2s] ease-out group-hover:scale-[1.4]`}
         />
         <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-700" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">

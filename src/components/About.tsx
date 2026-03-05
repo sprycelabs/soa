@@ -11,7 +11,7 @@ const About = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+  const imgY = useTransform(scrollYProgress, [0, 1], [180, -180]);
 
   return (
     <section id="o-nas" ref={sectionRef} className="relative">
@@ -27,7 +27,7 @@ const About = () => {
           <img
             src={foundersImg}
             alt="Zakladatelé SOA"
-            className="w-full aspect-[21/9] object-cover scale-[1.15]"
+            className="w-full aspect-[21/9] object-cover scale-[1.4]"
           />
         </motion.div>
       </div>

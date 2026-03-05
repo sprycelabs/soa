@@ -48,7 +48,7 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
     target: cardRef,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const imgY = useTransform(scrollYProgress, [0, 1], [120, -120]);
 
   const colClasses = [
     "col-span-12 md:col-span-4 md:col-start-1",
@@ -69,7 +69,7 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
           style={{ y: imgY }}
           src={member.img}
           alt={member.name}
-          className="w-full aspect-[3/4] object-cover scale-[1.15] transition-transform duration-[1.5s] ease-out hover:scale-[1.2] grayscale hover:grayscale-0"
+          className="w-full aspect-[3/4] object-cover scale-[1.35] transition-transform duration-[1.5s] ease-out hover:scale-[1.4] grayscale hover:grayscale-0"
         />
       </div>
       <div className="mt-6">
