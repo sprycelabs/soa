@@ -12,8 +12,8 @@ const Philosophy = () => {
     offset: ["start end", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], [80, -80]);
-  const goldLineY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const imageY = useTransform(scrollYProgress, [0, 1], [120, -120]);
+  const goldLineY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
