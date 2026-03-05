@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FeaturedProjects from "@/components/FeaturedProjects";
 import Philosophy from "@/components/Philosophy";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
