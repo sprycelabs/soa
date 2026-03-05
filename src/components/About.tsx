@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import foundersImg from "@/assets/founders.jpg";
 
@@ -6,21 +6,31 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const sectionRef = useRef<HTMLDivElement>(null!);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+
   return (
-    <section id="o-nas" className="relative overflow-hidden">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1.2 }}
-        className="w-full"
-      >
-        <img
-          src={foundersImg}
-          alt="Zakladatelé SOA"
-          className="w-full aspect-[21/9] object-cover"
-        />
-      </motion.div>
+    <section id="o-nas" ref={sectionRef} className="relative">
+      <div className="overflow-hidden">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1.2 }}
+          className="w-full"
+          style={{ y: imgY }}
+        >
+          <img
+            src={foundersImg}
+            alt="Zakladatelé SOA"
+            className="w-full aspect-[21/9] object-cover scale-[1.15]"
+          />
+        </motion.div>
+      </div>
 
       <div className="section-padding -mt-24 md:-mt-40 relative z-10">
         <div className="grid grid-cols-12 gap-4 md:gap-8">

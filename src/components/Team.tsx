@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
@@ -43,6 +43,13 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const cardRef = useRef<HTMLDivElement>(null!);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   const colClasses = [
     "col-span-12 md:col-span-4 md:col-start-1",
     "col-span-12 md:col-span-3 md:col-start-6 md:mt-24",
@@ -57,11 +64,12 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
       transition={{ duration: 0.9, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={colClasses[index]}
     >
-      <div className="overflow-hidden">
-        <img
+      <div ref={cardRef} className="overflow-hidden">
+        <motion.img
+          style={{ y: imgY }}
           src={member.img}
           alt={member.name}
-          className="w-full aspect-[3/4] object-cover transition-transform duration-[1.5s] ease-out hover:scale-[1.03] grayscale hover:grayscale-0"
+          className="w-full aspect-[3/4] object-cover scale-[1.15] transition-transform duration-[1.5s] ease-out hover:scale-[1.2] grayscale hover:grayscale-0"
         />
       </div>
       <div className="mt-6">
