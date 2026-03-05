@@ -6,7 +6,7 @@ const Philosophy = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const ease = [0.25, 0.46, 0.45, 0.94];
+  const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
   return (
     <section className="bg-secondary relative overflow-hidden">
