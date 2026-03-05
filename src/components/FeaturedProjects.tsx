@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import featured1 from "@/assets/featured-1.jpg";
 import featured2 from "@/assets/featured-2.jpg";
@@ -71,6 +71,13 @@ const FeaturedCard = ({ project, index, aspect }: { project: typeof projects[0];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const cardRef = useRef<HTMLDivElement>(null!);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
   return (
     <motion.div
       ref={ref}
@@ -79,11 +86,12 @@ const FeaturedCard = ({ project, index, aspect }: { project: typeof projects[0];
       transition={{ duration: 0.9, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="group cursor-pointer"
     >
-      <div className="relative overflow-hidden">
-        <img
+      <div ref={cardRef} className="relative overflow-hidden">
+        <motion.img
+          style={{ y: imgY }}
           src={project.img}
           alt={project.title}
-          className={`w-full ${aspect} object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03]`}
+          className={`w-full ${aspect} object-cover scale-[1.15] transition-transform duration-[1.5s] ease-out group-hover:scale-[1.2]`}
         />
         <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-700" />
       </div>
