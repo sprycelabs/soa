@@ -60,12 +60,31 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
   }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
     font-weight: 300;
     letter-spacing: 0.01em;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--secondary));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--gold) / 0.4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--gold) / 0.6);
   }
 
   h1, h2, h3, h4, h5, h6 {
