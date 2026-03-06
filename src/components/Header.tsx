@@ -1,26 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Search, X, Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import featured1 from "@/assets/featured-1.jpg";
-import featured2 from "@/assets/featured-2.jpg";
-import featured3 from "@/assets/featured-3.jpg";
-import featured4 from "@/assets/featured-4.jpg";
-
-const allProjects = [
-  { img: featured1, title: "Rodinný dům Praha", location: "Praha 6", category: "Architektura" },
-  { img: featured2, title: "Kanceláře Delta", location: "Brno", category: "Interiér" },
-  { img: featured3, title: "Rekonstrukce historického domu", location: "Praha 1", category: "Architektura" },
-  { img: featured4, title: "Městský park Brno", location: "Brno", category: "Urbanismus" },
-  { img: project1, title: "Městský dům", location: "Praha", category: "Architektura" },
-  { img: project2, title: "Nové kanceláře studio Delta", location: "Praha", category: "Interiér" },
-  { img: project3, title: "ZS LOBSTERS", location: "Praha", category: "Architektura" },
-  { img: project4, title: "Floridian Beach House", location: "Miami", category: "Urbanismus" },
-];
+import { useNavigate } from "react-router-dom";
+import { allProjects } from "@/data/projects";
 
 const navLinks = [
   { label: "Projekty", href: "#projekty" },
@@ -30,6 +12,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -240,7 +223,7 @@ const Header = () => {
                         className="group cursor-pointer"
                         onClick={() => {
                           setSearchOpen(false);
-                          document.getElementById("projekty")?.scrollIntoView({ behavior: "smooth" });
+                          navigate(`/projekt/${project.id}`, { state: { from: "projekty" } });
                         }}
                       >
                         <div className="overflow-hidden">
