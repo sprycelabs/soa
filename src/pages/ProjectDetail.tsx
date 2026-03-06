@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -8,7 +8,9 @@ import Footer from "@/components/Footer";
 
 const ProjectDetail = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { id } = useParams<{ id: string }>();
+  const fromSection = (location.state as any)?.from || "projekty";
   const project = allProjects.find((p) => p.id === id);
 
   useEffect(() => {
@@ -38,7 +40,7 @@ const ProjectDetail = () => {
           onClick={() => {
             navigate("/");
             setTimeout(() => {
-              document.getElementById("projekty")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById(fromSection)?.scrollIntoView({ behavior: "smooth" });
             }, 100);
           }}
           className="inline-flex items-center gap-2 font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"

@@ -70,7 +70,7 @@ const FeaturedCard = ({ project, index, aspect }: { project: Project; index: num
   const imgY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <Link to={`/projekt/${project.id}`}>
+    <Link to={`/projekt/${project.id}`} state={{ from: "vybrane-projekty" }}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 60 }}
