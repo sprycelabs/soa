@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { allProjects } from "@/data/projects";
@@ -8,6 +9,10 @@ import Footer from "@/components/Footer";
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = allProjects.find((p) => p.id === id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) {
     return (
