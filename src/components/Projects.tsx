@@ -93,14 +93,15 @@ const ProjectRow = ({ project, index, className = "", aspect }: { project: Proje
             className={`w-full ${aspect} object-cover scale-[1.35] transition-transform duration-[1.2s] ease-out group-hover:scale-[1.4]`}
           />
           <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-700" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-            <span className="font-body text-xs tracking-widest uppercase text-primary-foreground/70">
-              {project.category}
-            </span>
-            <h3 className="font-display text-2xl md:text-4xl text-primary-foreground font-light mt-1">
-              {project.title}
-            </h3>
+        </div>
+        <div className="mt-5 flex items-baseline justify-between">
+          <div>
+            <h3 className="font-display text-xl md:text-2xl font-light text-foreground">{project.title}</h3>
+            <p className="font-body text-sm text-muted-foreground font-light mt-2 leading-relaxed max-w-md">
+              {project.description}
+            </p>
           </div>
+          <span className="font-body text-xs text-muted-foreground/50 font-extralight hidden md:block">{project.year}</span>
         </div>
       </motion.div>
     </Link>
