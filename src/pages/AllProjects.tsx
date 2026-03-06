@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const AllProjects = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const titleRef = useRef(null);
   const titleInView = useInView(titleRef, { once: true, margin: "-100px" });
 
