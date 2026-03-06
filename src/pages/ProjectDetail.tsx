@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const ProjectDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const project = allProjects.find((p) => p.id === id);
 
@@ -33,13 +34,18 @@ const ProjectDetail = () => {
 
       {/* Back link */}
       <div className="section-padding pt-32 pb-8">
-        <Link
-          to="/#projekty"
+        <button
+          onClick={() => {
+            navigate("/");
+            setTimeout(() => {
+              document.getElementById("projekty")?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          }}
           className="inline-flex items-center gap-2 font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Zpět na projekty
-        </Link>
+        </button>
       </div>
 
       {/* Hero image */}
