@@ -77,7 +77,7 @@ const ProjectRow = ({ project, index, className = "", aspect }: { project: Proje
   const imgY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <Link to={`/projekt/${project.id}`}>
+    <Link to={`/projekt/${project.id}`} state={{ from: "projekty" }}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
