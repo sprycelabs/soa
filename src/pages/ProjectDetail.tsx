@@ -33,13 +33,18 @@ const ProjectDetail = () => {
 
       {/* Back link */}
       <div className="section-padding pt-32 pb-8">
-        <Link
-          to="/#projekty"
+        <button
+          onClick={() => {
+            navigate("/");
+            setTimeout(() => {
+              document.getElementById("projekty")?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          }}
           className="inline-flex items-center gap-2 font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Zpět na projekty
-        </Link>
+        </button>
       </div>
 
       {/* Hero image */}
