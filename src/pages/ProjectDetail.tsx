@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const ProjectDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const project = allProjects.find((p) => p.id === id);
 
