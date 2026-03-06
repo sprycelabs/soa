@@ -1,5 +1,5 @@
+import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { allProjects } from "@/data/projects";
@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const AllProjects = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const titleRef = useRef(null);
   const titleInView = useInView(titleRef, { once: true, margin: "-100px" });
 
