@@ -1,5 +1,5 @@
+import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { allProjects } from "@/data/projects";
