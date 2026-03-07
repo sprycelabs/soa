@@ -22,8 +22,8 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="col-span-12 md:col-span-5 mb-16 md:mb-0"
-        >
+          className="col-span-12 md:col-span-5 mb-16 md:mb-0">
+          
           <div className="luxury-divider mb-6" />
           <span className="luxury-label block mb-6">Kontakt</span>
           <h2 className="font-display text-4xl md:text-7xl lg:text-[7rem] font-light text-foreground leading-[0.82] mb-10">
@@ -41,15 +41,15 @@ const Contact = () => {
               <span className="luxury-label block mb-3">Email</span>
               <a
                 href="mailto:studio@soa.cz"
-                className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-500 font-extralight"
-              >
-                studio@soa.cz
+                className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-500 font-extralight">
+                
+                info@s-o-a.cz
               </a>
             </div>
             <div>
               <span className="luxury-label block mb-3">Telefon</span>
               <span className="font-body text-base text-foreground font-extralight">
-                +420 777 123 456
+                +420 774 322 109
               </span>
             </div>
             <div>
@@ -68,8 +68,8 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="col-span-12 md:col-span-5 md:col-start-8"
-        >
+          className="col-span-12 md:col-span-5 md:col-start-8">
+          
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>
               <label className="font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 block mb-3">Jméno</label>
@@ -80,8 +80,8 @@ const Contact = () => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
-                placeholder="Vaše jméno"
-              />
+                placeholder="Vaše jméno" />
+              
             </div>
 
             <div>
@@ -93,8 +93,8 @@ const Contact = () => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
-                placeholder="vas@email.cz"
-              />
+                placeholder="vas@email.cz" />
+              
             </div>
 
             <div>
@@ -105,8 +105,8 @@ const Contact = () => {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35"
-                placeholder="+420 ..."
-              />
+                placeholder="+420 ..." />
+              
             </div>
 
             <div>
@@ -118,31 +118,31 @@ const Contact = () => {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground font-light focus:outline-none focus:border-gold transition-colors duration-500 placeholder:text-foreground/35 resize-none"
-                placeholder="Popište váš projekt nebo nápad..."
-              />
+                placeholder="Popište váš projekt nebo nápad..." />
+              
             </div>
 
             <button
               type="submit"
-              className="inline-block px-12 py-5 border border-foreground text-foreground font-body text-[10px] tracking-[0.35em] uppercase hover:bg-foreground hover:text-primary-foreground transition-all duration-700 mt-4"
-            >
+              className="inline-block px-12 py-5 border border-foreground text-foreground font-body text-[10px] tracking-[0.35em] uppercase hover:bg-foreground hover:text-primary-foreground transition-all duration-700 mt-4">
+              
               Odeslat zprávu
             </button>
 
-            {submitted && (
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="font-body text-sm text-gold font-extralight mt-4"
-              >
+            {submitted &&
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="font-body text-sm text-gold font-extralight mt-4">
+              
                 Děkujeme za zprávu. Ozveme se vám co nejdříve.
               </motion.p>
-            )}
+            }
           </form>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Contact;

@@ -3,11 +3,11 @@ import { useRef } from "react";
 import { Instagram, Linkedin } from "lucide-react";
 
 const navLinks = [
-  { label: "Projekty", href: "#projekty" },
-  { label: "O nás", href: "#o-nas" },
-  { label: "Tým", href: "#tym" },
-  { label: "Kontakt", href: "#kontakt" },
-];
+{ label: "Projekty", href: "#projekty" },
+{ label: "O nás", href: "#o-nas" },
+{ label: "Tým", href: "#tym" },
+{ label: "Kontakt", href: "#kontakt" }];
+
 
 const Footer = () => {
   const ref = useRef(null);
@@ -18,8 +18,8 @@ const Footer = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
+        transition={{ duration: 0.8 }}>
+        
         <div className="grid grid-cols-12 gap-8 md:gap-12">
           {/* Column 1 — Studio */}
           <div className="col-span-12 md:col-span-4">
@@ -39,15 +39,15 @@ const Footer = () => {
           <div className="col-span-6 md:col-span-2 md:col-start-6">
             <span className="luxury-label block mb-6 text-primary-foreground/30">Navigace</span>
             <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight"
-                >
+              {navLinks.map((link) =>
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
+                
                   {link.label}
                 </a>
-              ))}
+              )}
             </nav>
           </div>
 
@@ -61,9 +61,9 @@ const Footer = () => {
                 </span>
                 <a
                   href="mailto:studio@soa.cz"
-                  className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight"
-                >
-                  studio@soa.cz
+                  className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
+                  
+                  ​info@s-o-a.cz
                 </a>
               </div>
               <div>
@@ -71,7 +71,7 @@ const Footer = () => {
                   Telefon
                 </span>
                 <span className="font-body text-sm text-primary-foreground/60 font-extralight">
-                  +420 777 123 456
+                  +420 774 322 109
                 </span>
               </div>
               <div>
@@ -79,7 +79,8 @@ const Footer = () => {
                   Adresa
                 </span>
                 <span className="font-body text-sm text-primary-foreground/60 font-extralight">
-                  Praha, Česká republika
+                  Václavské nám. 828/23
+110 00 Praha, Česká Republika
                 </span>
               </div>
             </div>
@@ -89,12 +90,11 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-2 md:col-start-11">
             <span className="luxury-label block mb-6 text-primary-foreground/30">Sledujte nás</span>
             <div className="flex md:flex-col gap-5">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group"
-              >
+              <a href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group">
+                
                 <Instagram size={18} strokeWidth={1.2} />
                 <span className="font-body text-sm font-extralight">Instagram</span>
               </a>
@@ -102,8 +102,8 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group"
-              >
+                className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group">
+                
                 <Linkedin size={18} strokeWidth={1.2} />
                 <span className="font-body text-sm font-extralight">LinkedIn</span>
               </a>
@@ -121,8 +121,8 @@ const Footer = () => {
           </p>
         </div>
       </motion.div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;

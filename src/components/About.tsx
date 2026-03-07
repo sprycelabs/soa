@@ -9,7 +9,7 @@ const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null!);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end start"]
   });
   const imgY = useTransform(scrollYProgress, [0, 1], [180, -180]);
 
@@ -22,13 +22,13 @@ const About = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1.2 }}
           className="w-full"
-          style={{ y: imgY }}
-        >
+          style={{ y: imgY }}>
+          
           <img
-            src={foundersImg}
+
             alt="Zakladatelé SOA"
-            className="w-full aspect-[21/9] object-cover scale-[1.4]"
-          />
+            className="w-full aspect-[21/9] object-cover scale-[1.4]" src="/lovable-uploads/74b65083-d1a4-4b2f-b2fa-982700d164aa.jpg" />
+          
         </motion.div>
       </div>
 
@@ -38,8 +38,8 @@ const About = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="col-span-12 md:col-span-7 bg-background p-10 md:p-20"
-          >
+            className="col-span-12 md:col-span-7 bg-background p-10 md:p-20">
+            
             <div className="luxury-divider mb-6" />
             <span className="luxury-label block mb-4">O nás</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-10 leading-[0.85]">
@@ -47,17 +47,17 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                SOA – Sons of Architecture je architektonické studio zaměřené na současnou architekturu, interiéry a veřejný prostor.
+                Jsme tři partneři a jeden tým architektů. A svou práci děláme rádi. Architektura je pro nás dialog – mezi námi, klientem i samotným místem. 
               </p>
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                Každý projekt vnímáme jako jedinečnou příležitost vytvořit prostor, který má charakter, kvalitu a dlouhodobou hodnotu.
+                Věříme v úspornou, promyšlenou architekturu navrženou na míru konkrétnímu projektu i jeho lidem. Každý návrh je pro nás příležitostí posunout vlastní hranice a hledat nové cesty.
               </p>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default About;
