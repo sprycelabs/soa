@@ -24,9 +24,9 @@ export const allProjects: Project[] = [
   {
     id: "rodinny-dum-praha",
     img: featured1,
-    title: "Rodinný dům Praha",
+    title: "Florida Beach House",
     category: "Architektura",
-    location: "Praha 6",
+    location: "Florida",
     year: "2024",
     description: "Moderní rodinný dům zasazený do kontextu vilové čtvrti v Praze 6. Návrh klade důraz na propojení interiéru s exteriérem a maximální využití přirozeného světla.",
     details: [
@@ -56,9 +56,9 @@ export const allProjects: Project[] = [
   {
     id: "rekonstrukce-historickeho-domu",
     img: featured3,
-    title: "Rekonstrukce historického domu",
-    category: "Architektura",
-    location: "Praha 1",
+    title: "Pho King",
+    category: "Interiér",
+    location: "Poprad",
     year: "2023",
     description: "Citlivá rekonstrukce historického měšťanského domu v centru Prahy. Projekt snoubí zachování cenných historických prvků s moderním komfortem bydlení.",
     details: [
@@ -72,9 +72,9 @@ export const allProjects: Project[] = [
   {
     id: "mestsky-park-brno",
     img: featured4,
-    title: "Městský park Brno",
+    title: "Park Historie",
     category: "Urbanismus",
-    location: "Brno",
+    location: "Aš",
     year: "2022",
     description: "Revitalizace městského parku v Brně zahrnující nové pěší trasy, odpočinkové zóny a vodní prvky. Projekt vytváří příjemný veřejný prostor pro všechny generace.",
     details: [
@@ -88,11 +88,11 @@ export const allProjects: Project[] = [
   {
     id: "mestsky-dum",
     img: project1,
-    title: "Městský dům",
+    title: "Vily Lysolaje",
     category: "Architektura",
     location: "Praha",
     year: "2024",
-    description: "Městský dům navržený jako symbióza městského života a privátního bydlení. Kompaktní dispozice maximalizuje prostor při zachování intimity jednotlivých bytů.",
+    description: "Návrh dvou vil přináší do pražského Lysolajského údolí novou vrstvu moderní architektury, která citlivě doplňuje malebnou oblast definovanou především úchvatnou přírodní scenérií. ",
     details: [
       "Vertikální koncept s terasami orientovanými do vnitrobloku.",
       "Fasáda z cihelného obkladu odkazující na industriální charakter lokality.",
@@ -104,11 +104,11 @@ export const allProjects: Project[] = [
   {
     id: "kancelare-studio-delta",
     img: project2,
-    title: "Nové kanceláře studio Deltab",
+    title: "WOKIN",
     category: "Interiér",
     location: "Praha",
     year: "2023",
-    description: "Návrh kreativního pracovního prostředí pro architektonické studio. Prostor odráží hodnoty studia – otevřenost, spolupráci a preciznost.",
+    description: "Základní koncept restaurace vychází z inspirace asijským tržištěm.",
     details: [
       "Centrální modelářská dílna jako srdce studia.",
       "Materiálová knihovna integrovaná do designu interiéru.",
@@ -120,11 +120,11 @@ export const allProjects: Project[] = [
   {
     id: "zs-lobsters",
     img: project3,
-    title: "ZS LOBSTERS",
+    title: "Pekárny Zrno Zrnko",
     category: "Architektura",
     location: "Praha",
     year: "2023",
-    description: "Návrh moderní základní školy s důrazem na flexibilní výukové prostory a propojení s přírodou. Škola budoucnosti pro současné děti.",
+    description: "Návrh interiéru řemeslných pekáren Zrno Zrnko",
     details: [
       "Učebny navržené jako flexibilní prostory s možností variabilního uspořádání.",
       "Zelená střecha s venkovní učebnou a školní zahradou.",
@@ -136,11 +136,11 @@ export const allProjects: Project[] = [
   {
     id: "floridian-beach-house",
     img: project4,
-    title: "Floridian Beach House",
+    title: "Revitalizace Křižíkova pavilonu D",
     category: "Urbanismus",
-    location: "Florida, USA",
+    location: "Praha",
     year: "2022",
-    description: "Luxusní plážový dům na pobřeží Floridy. Projekt kombinuje tropický životní styl s minimalistickou architekturou a maximálním propojením s oceánem.",
+    description: "Křižíkův pavilon D se nachází v dolní části areálu Výstaviště Praha za Průmyslovým palácem",
     details: [
       "Otevřená dispozice propojující obytné prostory s venkovní terasou a bazénem.",
       "Odolnost vůči hurikánům integrována do architektonického konceptu.",

@@ -2,11 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const awards = [
-  { name: "ArchDaily", detail: "Building of the Year 2024 – nominace", year: "2024" },
-  { name: "Dezeen", detail: "Featured Project", year: "2023" },
-  { name: "Česká cena za architekturu", detail: "Finalista", year: "2023" },
-  { name: "BigMat Award", detail: "Shortlist", year: "2022" },
-  { name: "ASB Magazine", detail: "Projekt roku", year: "2022" },
+  { name: "Grand Prix Architektů", detail: "Krajinářská architektura a zahradní tvorba", year: "2020" },
+  { name: "Grand Prix Architektů", detail: "Šetrná stavba", year: "2020" },
+  { name: "Veřejný interiér roku", detail: "Výherce", year: "2020" },
+  { name: "Stavba roku", detail: "Cena MMR ČR", year: "2020" },
+  { name: "Stavba roku Středočeského kraje ", detail: "Výherce", year: "2020" },
 ];
 
 const Awards = () => {
