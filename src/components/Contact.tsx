@@ -55,9 +55,9 @@ const Contact = () => {
             <div>
               <span className="luxury-label block mb-3">Adresa</span>
               <span className="font-body text-base text-foreground font-extralight">
-                Vinohradská 12
+                Václavské nám. 828/23
                 <br />
-                Praha 2, 120 00
+                110 00 Praha, Česká Republika
               </span>
             </div>
           </div>
