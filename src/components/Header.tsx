@@ -138,7 +138,7 @@ const Header = () => {
               </button>
             </div>
 
-            <nav className="flex-1 flex flex-col justify-center px-6 gap-8">
+            <nav className="flex-1 flex flex-col px-6 gap-8">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
@@ -157,7 +157,7 @@ const Header = () => {
             <div className="px-6 pb-8">
               <div className="luxury-divider mb-4" />
               <p className="font-body text-xs text-muted-foreground font-extralight tracking-widest">
-                studio@soa.cz
+                info@s-o-a.cz
               </p>
             </div>
           </motion.div>

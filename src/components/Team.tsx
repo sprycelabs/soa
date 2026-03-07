@@ -5,9 +5,9 @@ import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 
 const members = [
-  { img: "/lovable-uploads/4df07721-2ec1-48b2-bed4-4f7c27560c8a.jpg", name: "Štefan Šulek", position: "Architekt|zakladatel" },
-  { img: "/lovable-uploads/97daf54d-0028-44de-b377-fc4765d2b495.jpg", name: "Ondřej Píhrt", position: "Architekt|zakladatel" },
-  { img: "/lovable-uploads/ec7171bb-804a-4e51-bc73-1d6717064de4.jpg", name: "Ondřej Laciga", position: "Architekt|zakladatel" },
+  { img: "/uploads/4df07721-2ec1-48b2-bed4-4f7c27560c8a.jpg", name: "Štefan Šulek", position: "Architekt|zakladatel" },
+  { img: "/uploads/97daf54d-0028-44de-b377-fc4765d2b495.jpg", name: "Ondřej Píhrt", position: "Architekt|zakladatel" },
+  { img: "/uploads/ec7171bb-804a-4e51-bc73-1d6717064de4.jpg", name: "Ondřej Laciga", position: "Architekt|zakladatel" },
 ];
 
 const Team = () => {

@@ -16,10 +16,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <FeaturedProjects />
+      <Projects />
       <Philosophy />
       <Services />
-      <Projects />
       <Process />
       <About />
       <Awards />

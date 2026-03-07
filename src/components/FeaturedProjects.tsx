@@ -40,9 +40,6 @@ const FeaturedProjects = () => {
         <div className="col-span-12 md:col-span-7">
           <FeaturedCard project={featuredProjects[0]} index={0} aspect="aspect-[4/3]" />
         </div>
-        <div className="col-span-12 md:col-span-5 md:mt-32">
-          <FeaturedCard project={featuredProjects[1]} index={1} aspect="aspect-[3/4]" />
-        </div>
       </div>
 
       {/* Row 2 */}

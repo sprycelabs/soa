@@ -90,7 +90,7 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-2 md:col-start-11">
             <span className="luxury-label block mb-6 text-primary-foreground/30">Sledujte nás</span>
             <div className="flex md:flex-col gap-5">
-              <a href="https://instagram.com"
+              <a href="https://www.instagram.com/soaarchitekti/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group">
@@ -99,7 +99,7 @@ const Footer = () => {
                 <span className="font-body text-sm font-extralight">Instagram</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/soa-architekti/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-500 group">
