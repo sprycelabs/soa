@@ -104,7 +104,7 @@ export const allProjects: Project[] = [
   {
     id: "kancelare-studio-delta",
     img: project2,
-    title: "Nové kanceláře studio Delta",
+    title: "Nové kanceláře studio Deltab",
     category: "Interiér",
     location: "Praha",
     year: "2023",
