@@ -1,12 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Star } from "lucide-react";
 
-const awards = [
-  { name: "Grand Prix Architektů", detail: "Krajinářská architektura a zahradní tvorba", year: "2020" },
-  { name: "Grand Prix Architektů", detail: "Šetrná stavba", year: "2020" },
-  { name: "Veřejný interiér roku", detail: "Výherce", year: "2020" },
-  { name: "Stavba roku", detail: "Cena MMR ČR", year: "2020" },
-  { name: "Stavba roku Středočeského kraje ", detail: "Výherce", year: "2020" },
+const reviews = [
+  { name: "Martin Kořínek", role: "Majitel vily", rating: 5, text: "Profesionální přístup od prvního setkání. Výsledek předčil naše očekávání." },
+  { name: "Kateřina Blažková", role: "Ředitelka Zrno Zrnko", rating: 5, text: "Studio SOA dokázalo přetavit naši vizi řemeslné pekárny do dokonalého prostoru." },
+  { name: "Tomáš Hrubý", role: "Developer", rating: 5, text: "Spolupráce na projektu Vily Lysolaje byla bezchybná. Dodržení termínů i rozpočtu." },
+  { name: "Jana Veselá", role: "Majitelka restaurace", rating: 4, text: "Kreativní řešení interiéru WOKIN překvapilo nás i naše hosty." },
+  { name: "Petr Šimánek", role: "Správce areálu Výstaviště", rating: 5, text: "Revitalizace Křižíkova pavilonu je ukázkou citlivého přístupu k historické architektuře." },
 ];
 
 const Awards = () => {
@@ -24,17 +25,17 @@ const Awards = () => {
           className="col-span-12 md:col-span-4 mb-16 md:mb-0"
         >
           <div className="luxury-divider mb-6" />
-          <span className="luxury-label block mb-4">Uznání</span>
+          <span className="luxury-label block mb-4">Ohlasy</span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[0.85]">
-            Ocenění
+            Recenze
             <br />
-            <span className="italic text-muted-foreground">&amp; publikace</span>
+            <span className="italic text-muted-foreground">& reference</span>
           </h2>
         </motion.div>
 
         <div className="col-span-12 md:col-span-7 md:col-start-6">
-          {awards.map((award, i) => (
-            <AwardRow key={award.name} award={award} index={i} />
+          {reviews.map((review, i) => (
+            <ReviewRow key={review.name} review={review} index={i} />
           ))}
         </div>
       </div>
@@ -42,7 +43,7 @@ const Awards = () => {
   );
 };
 
-const AwardRow = ({ award, index }: { award: typeof awards[0]; index: number }) => {
+const ReviewRow = ({ review, index }: { review: typeof reviews[0]; index: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -52,11 +53,23 @@ const AwardRow = ({ award, index }: { award: typeof awards[0]; index: number }) 
       initial={{ opacity: 0, x: -20 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="grid grid-cols-12 gap-4 py-6 border-b border-border items-baseline group hover:bg-accent/30 transition-colors duration-500 -mx-4 px-4"
+      className="py-6 border-b border-border group hover:bg-accent/30 transition-colors duration-500 -mx-4 px-4"
     >
-      <span className="col-span-2 md:col-span-1 font-body text-[10px] tracking-widest text-[hsl(var(--gold))]">{award.year}</span>
-      <span className="col-span-5 font-display text-xl md:text-2xl font-light text-foreground">{award.name}</span>
-      <span className="col-span-5 md:col-span-6 font-body text-xs text-muted-foreground font-extralight text-right tracking-wider">{award.detail}</span>
+      <div className="flex items-center gap-1 mb-3">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            className={`w-3.5 h-3.5 ${i < review.rating ? "fill-[hsl(var(--gold))] text-[hsl(var(--gold))]" : "text-muted-foreground/30"}`}
+          />
+        ))}
+      </div>
+      <p className="font-body text-sm md:text-base font-light text-foreground/80 mb-4 leading-relaxed italic">
+        „{review.text}"
+      </p>
+      <div className="flex items-baseline justify-between">
+        <span className="font-display text-lg md:text-xl font-light text-foreground">{review.name}</span>
+        <span className="font-body text-xs text-muted-foreground font-extralight tracking-wider">{review.role}</span>
+      </div>
     </motion.div>
   );
 };
