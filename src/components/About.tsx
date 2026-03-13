@@ -26,7 +26,7 @@ const About = () => {
           
           <img
 
-            alt="Zakladatelé SOA"
+            alt="Zakladatelé LAstudio"
             className="w-full aspect-[21/9] object-cover scale-[1.4]" src="/uploads/74b65083-d1a4-4b2f-b2fa-982700d164aa.jpg" />
           
         </motion.div>
