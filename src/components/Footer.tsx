@@ -61,9 +61,9 @@ const Footer = () => {
                 </span>
                 <a
                   href="mailto:studio@soa.cz"
-                  className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
+                   className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
                   
-                  ​info@s-o-a.cz
+                  info@lastudio.cz
                 </a>
               </div>
               <div>
