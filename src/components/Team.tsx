@@ -1,13 +1,11 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import teamMan from "@/assets/team-man.jpg";
+import teamWoman from "@/assets/team-woman.jpg";
 
 const members = [
-  { img: "/uploads/4df07721-2ec1-48b2-bed4-4f7c27560c8a.jpg", name: "Štefan Šulek", position: "Architekt|zakladatel" },
-  { img: "/uploads/97daf54d-0028-44de-b377-fc4765d2b495.jpg", name: "Ondřej Píhrt", position: "Architekt|zakladatel" },
-  { img: "/uploads/ec7171bb-804a-4e51-bc73-1d6717064de4.jpg", name: "Ondřej Laciga", position: "Architekt|zakladatel" },
+  { img: teamMan, name: "Jakub Novotný", position: "Architekt | zakladatel" },
+  { img: teamWoman, name: "Lucie Králová", position: "Architektka | zakladatelka" },
 ];
 
 const Team = () => {
