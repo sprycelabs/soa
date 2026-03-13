@@ -177,7 +177,7 @@ const Header = () => {
             <div className="px-6 md:px-16 lg:px-24 xl:px-36 pt-5 md:pt-8 h-full flex flex-col">
               {/* Top bar */}
               <div className="flex items-center justify-between mb-8 md:mb-12">
-                <span className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">SOA</span>
+                <span className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">LAstudio</span>
                 <button
                   onClick={() => setSearchOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-300"
