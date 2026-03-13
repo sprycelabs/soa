@@ -75,7 +75,7 @@ const Header = () => {
         }`}
       >
         <a href="#" className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">
-          SOA
+          LAstudio
         </a>
 
         {/* Desktop nav */}
