@@ -43,7 +43,7 @@ const About = () => {
             <div className="luxury-divider mb-6" />
             <span className="luxury-label block mb-4">O nás</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-10 leading-[0.85]">
-              O studiu <span className="italic">SOA</span>
+              O studiu <span className="italic">LAstudio</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
