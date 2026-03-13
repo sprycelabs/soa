@@ -128,7 +128,7 @@ const Header = () => {
             className="fixed inset-0 z-[100] bg-background flex flex-col"
           >
             <div className="px-6 py-5 flex items-center justify-between">
-              <span className="font-display text-xl font-semibold tracking-wider text-foreground">SOA</span>
+              <span className="font-display text-xl font-semibold tracking-wider text-foreground">LAstudio</span>
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-foreground"
