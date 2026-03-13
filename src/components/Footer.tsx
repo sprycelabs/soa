@@ -24,10 +24,10 @@ const Footer = () => {
           {/* Column 1 — Studio */}
           <div className="col-span-12 md:col-span-4">
             <span className="font-display text-4xl md:text-5xl font-light tracking-wider block leading-[0.85]">
-              SOA
+              LAstudio
             </span>
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/40 mt-3 mb-6">
-              Sons of Architecture
+              Architecture & Design
             </p>
             <div className="w-12 h-px bg-gold mb-6" />
             <p className="font-body text-sm text-primary-foreground/50 font-extralight leading-[1.8] max-w-xs">
