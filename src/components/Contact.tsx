@@ -40,10 +40,10 @@ const Contact = () => {
             <div>
               <span className="luxury-label block mb-3">Email</span>
               <a
-                href="mailto:studio@soa.cz"
+                href="mailto:info@lastudio.cz"
                 className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-500 font-extralight">
                 
-                info@s-o-a.cz
+                info@lastudio.cz
               </a>
             </div>
             <div>

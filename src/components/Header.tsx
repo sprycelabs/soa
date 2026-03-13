@@ -75,7 +75,7 @@ const Header = () => {
         }`}
       >
         <a href="#" className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">
-          SOA
+          LAstudio
         </a>
 
         {/* Desktop nav */}
@@ -128,7 +128,7 @@ const Header = () => {
             className="fixed inset-0 z-[100] bg-background flex flex-col"
           >
             <div className="px-6 py-5 flex items-center justify-between">
-              <span className="font-display text-xl font-semibold tracking-wider text-foreground">SOA</span>
+              <span className="font-display text-xl font-semibold tracking-wider text-foreground">LAstudio</span>
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-foreground"
@@ -157,7 +157,7 @@ const Header = () => {
             <div className="px-6 pb-8">
               <div className="luxury-divider mb-4" />
               <p className="font-body text-xs text-muted-foreground font-extralight tracking-widest">
-                info@s-o-a.cz
+                info@lastudio.cz
               </p>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ const Header = () => {
             <div className="px-6 md:px-16 lg:px-24 xl:px-36 pt-5 md:pt-8 h-full flex flex-col">
               {/* Top bar */}
               <div className="flex items-center justify-between mb-8 md:mb-12">
-                <span className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">SOA</span>
+                <span className="font-display text-xl md:text-2xl font-semibold tracking-wider text-foreground">LAstudio</span>
                 <button
                   onClick={() => setSearchOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-300"

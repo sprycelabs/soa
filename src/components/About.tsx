@@ -26,7 +26,7 @@ const About = () => {
           
           <img
 
-            alt="Zakladatelé SOA"
+            alt="Zakladatelé LAstudio"
             className="w-full aspect-[21/9] object-cover scale-[1.4]" src="/uploads/74b65083-d1a4-4b2f-b2fa-982700d164aa.jpg" />
           
         </motion.div>
@@ -43,14 +43,14 @@ const About = () => {
             <div className="luxury-divider mb-6" />
             <span className="luxury-label block mb-4">O nás</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-10 leading-[0.85]">
-              O studiu <span className="italic">SOA</span>
+              O studiu <span className="italic">LAstudio</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                Jsme tři partneři a jeden tým architektů. A svou práci děláme rádi. Architektura je pro nás dialog – mezi námi, klientem i samotným místem. 
+                Jsme dva partneři a jeden tým architektů. Architektura je pro nás dialog – mezi námi, klientem i samotným místem. 
               </p>
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                Věříme v úspornou, promyšlenou architekturu navrženou na míru konkrétnímu projektu i jeho lidem. Každý návrh je pro nás příležitostí posunout vlastní hranice a hledat nové cesty.
+                Věříme v promyšlenou architekturu navrženou na míru konkrétnímu projektu i jeho lidem. Každý návrh je pro nás příležitostí posunout vlastní hranice.
               </p>
             </div>
           </motion.div>

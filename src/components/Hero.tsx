@@ -54,21 +54,13 @@ const Hero = () => {
               transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="block text-[3.5rem] md:text-[9rem] lg:text-[13rem]"
             >
-              SOA
+              LAstudio
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="block text-[2rem] md:text-[5rem] lg:text-[7rem] text-primary-foreground/60"
-            >
-              Sons of
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="block text-[2rem] md:text-[5rem] lg:text-[7rem] italic text-primary-foreground/80"
+              className="block text-[2rem] md:text-[5rem] lg:text-[7rem] italic text-primary-foreground/60"
             >
               Architecture
             </motion.span>

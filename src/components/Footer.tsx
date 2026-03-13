@@ -24,10 +24,10 @@ const Footer = () => {
           {/* Column 1 — Studio */}
           <div className="col-span-12 md:col-span-4">
             <span className="font-display text-4xl md:text-5xl font-light tracking-wider block leading-[0.85]">
-              SOA
+              LAstudio
             </span>
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/40 mt-3 mb-6">
-              Sons of Architecture
+              Architecture & Design
             </p>
             <div className="w-12 h-px bg-gold mb-6" />
             <p className="font-body text-sm text-primary-foreground/50 font-extralight leading-[1.8] max-w-xs">
@@ -61,9 +61,9 @@ const Footer = () => {
                 </span>
                 <a
                   href="mailto:studio@soa.cz"
-                  className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
+                   className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-500 font-extralight">
                   
-                  ​info@s-o-a.cz
+                  info@lastudio.cz
                 </a>
               </div>
               <div>
@@ -114,7 +114,7 @@ const Footer = () => {
         {/* Bottom line */}
         <div className="mt-20 md:mt-28 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="font-body text-[10px] text-primary-foreground/30 font-extralight tracking-[0.2em]">
-            © {new Date().getFullYear()} SOA architekti, s.r.o.
+            © {new Date().getFullYear()} LAstudio, s.r.o.
           </p>
           <p className="font-body text-[10px] text-primary-foreground/30 font-extralight tracking-[0.2em]">
             Všechna práva vyhrazena
