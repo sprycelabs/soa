@@ -49,9 +49,8 @@ const MemberCard = ({ member, index }: { member: typeof members[0]; index: numbe
   const imgY = useTransform(scrollYProgress, [0, 1], [120, -120]);
 
   const colClasses = [
-    "col-span-12 md:col-span-4 md:col-start-1",
-    "col-span-12 md:col-span-3 md:col-start-6 md:mt-24",
-    "col-span-12 md:col-span-4 md:col-start-9 md:-mt-8",
+    "col-span-12 md:col-span-5 md:col-start-1",
+    "col-span-12 md:col-span-5 md:col-start-7 md:mt-24",
   ];
 
   return (
