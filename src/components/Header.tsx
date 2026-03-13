@@ -157,7 +157,7 @@ const Header = () => {
             <div className="px-6 pb-8">
               <div className="luxury-divider mb-4" />
               <p className="font-body text-xs text-muted-foreground font-extralight tracking-widest">
-                info@s-o-a.cz
+                info@lastudio.cz
               </p>
             </div>
           </motion.div>

@@ -3,11 +3,11 @@ import { useRef } from "react";
 import { Star } from "lucide-react";
 
 const reviews = [
-  { name: "Martin Kořínek", role: "Majitel vily", rating: 5, text: "Profesionální přístup od prvního setkání. Výsledek předčil naše očekávání." },
-  { name: "Kateřina Blažková", role: "Ředitelka Zrno Zrnko", rating: 5, text: "Studio SOA dokázalo přetavit naši vizi řemeslné pekárny do dokonalého prostoru." },
-  { name: "Tomáš Hrubý", role: "Developer", rating: 5, text: "Spolupráce na projektu Vily Lysolaje byla bezchybná. Dodržení termínů i rozpočtu." },
-  { name: "Jana Veselá", role: "Majitelka restaurace", rating: 4, text: "Kreativní řešení interiéru WOKIN překvapilo nás i naše hosty." },
-  { name: "Petr Šimánek", role: "Správce areálu Výstaviště", rating: 5, text: "Revitalizace Křižíkova pavilonu je ukázkou citlivého přístupu k historické architektuře." },
+  { name: "Martin Kořínek", role: "Majitel rezidence", rating: 5, text: "Profesionální přístup od prvního setkání. Výsledek předčil naše očekávání." },
+  { name: "Kateřina Blažková", role: "Majitelka kavárny", rating: 5, text: "Studio LAstudio dokázalo přetavit naši vizi do dokonalého prostoru." },
+  { name: "Tomáš Hrubý", role: "Developer", rating: 5, text: "Spolupráce na projektu ateliérů byla bezchybná. Dodržení termínů i rozpočtu." },
+  { name: "Jana Veselá", role: "Majitelka bistra", rating: 4, text: "Kreativní řešení interiéru Bistra Skleník překvapilo nás i naše hosty." },
+  { name: "Petr Šimánek", role: "Zástupce města", rating: 5, text: "Lávka přes Moravu je ukázkou citlivého přístupu k veřejnému prostoru." },
 ];
 
 const Awards = () => {

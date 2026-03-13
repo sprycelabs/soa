@@ -114,7 +114,7 @@ const Footer = () => {
         {/* Bottom line */}
         <div className="mt-20 md:mt-28 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="font-body text-[10px] text-primary-foreground/30 font-extralight tracking-[0.2em]">
-            © {new Date().getFullYear()} SOA architekti, s.r.o.
+            © {new Date().getFullYear()} LAstudio, s.r.o.
           </p>
           <p className="font-body text-[10px] text-primary-foreground/30 font-extralight tracking-[0.2em]">
             Všechna práva vyhrazena

@@ -47,10 +47,10 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                Jsme tři partneři a jeden tým architektů. A svou práci děláme rádi. Architektura je pro nás dialog – mezi námi, klientem i samotným místem. 
+                Jsme dva partneři a jeden tým architektů. Architektura je pro nás dialog – mezi námi, klientem i samotným místem. 
               </p>
               <p className="font-body text-sm md:text-base leading-[1.8] text-muted-foreground font-extralight">
-                Věříme v úspornou, promyšlenou architekturu navrženou na míru konkrétnímu projektu i jeho lidem. Každý návrh je pro nás příležitostí posunout vlastní hranice a hledat nové cesty.
+                Věříme v promyšlenou architekturu navrženou na míru konkrétnímu projektu i jeho lidem. Každý návrh je pro nás příležitostí posunout vlastní hranice.
               </p>
             </div>
           </motion.div>
